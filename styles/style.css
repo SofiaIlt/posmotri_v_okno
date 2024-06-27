@@ -112,11 +112,6 @@ ol {
   border: 1px solid #fff;
 }
 
-.search-form__pseudo-checkbox:has(:focus-visible) {
-  border: 1px solid #fff;
-  outline: none;
-}
-
 .search-form__checkbox:checked + .search-form__pseudo-checkbox {
   box-shadow: inset 0 0 0 1px #000;
   background-color: #fff;
@@ -127,6 +122,7 @@ ol {
   cursor: pointer;
   display: flex;
   align-items: center;
+  outline: none;
 }
 
 .search-form__label:active .search-form__pseudo-checkbox {
@@ -139,8 +135,7 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #fff;
-  outline: none;
+  outline: 1px solid #fff;
 }
 
 .search-form__label-text {
@@ -159,15 +154,21 @@ ol {
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   color: #fff;
+  outline: none;
 }
 
 .search-form__textfield::placeholder {
   color: rgb(#fff / 60%);
 }
 
+.search-form__textfield:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
 .search-form__textfield:has(:focus-visible) {
-  border: 1px solid #fff;
-  outline: none;
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .button {
@@ -179,11 +180,12 @@ ol {
   background-color: transparent;
   line-height: 21.6px;
   cursor: pointer;
+  outline: none;
 }
 
-.button:has(:focus-visible) {
+.button:focus-visible {
   outline: 1px solid #fff;
-  outline: none;
+  outline-offset: 2px;
 }
 
 .button:active {
@@ -241,11 +243,11 @@ ol {
   display: block;
   text-decoration: none;
   margin: 2px;
+  outline: none;
 }
 
-.content__card-link:has(:focus-visible) {
-  border: 1px solid #fff;
-  outline: none;
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__card-link:active {
